@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>???</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section class="calculator-wrap">
+            <div class="title-wrapper">
+                <h1 class="calc-title">Pocket Box Calculator (Boxket)</h1>
+            </div>
+            </section>
+            <section class="calculator">
+                <form method="get" action="#" name="form" data-calc-mode="initial" autocomplete="off" id="calculator">
+                <textarea class="text" id="textArea" disabled></textarea>
+                <div class="buttons-wrap">
+                    <div class="rowc">
+                        <button id="delete-btn" value="delete" data-operator="delete" class="margin blue" onclick="delInput()">Del</button>
+                        <button id="calc-btn" data-operator="equal" class="margin white" onclick="solve()">=</button>
+                        <button id="clear-btn" data-operator="clear" class="margin red" onclick="clearHolder()">C</button>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <button id="btn-1" value="1" data-btn-val="1" onclick="inputNumber('1')">1</button>
+                            <button id="btn-4" value="4" data-btn-val="4" onclick="inputNumber('4')">4</button>
+                            <button id="btn-7" value="7" data-btn-val="7" onclick="inputNumber('7')">7</button>
+                            <!-- <button id="percentage-btn" data-operator="percentage" onclick="percentage()">%</button> -->
+                            <!-- <button id="negative-btn" data-operator="negative" onclick="">+/-</button> -->
+                            <button id="btn-0" value="0" data-btn-val="0" onclick="inputNumber('0')">0</button>
+                        </div>
+                        <div class="column">
+                            <button id="btn-2" value="2" data-btn-val="2" onclick="inputNumber('2')">2</button>
+                            <button id="btn-5" value="5" data-btn-val="5" onclick="inputNumber('5')">5</button>
+                            <button id="btn-8" value="8" data-btn-val="8" onclick="inputNumber('8')">8</button>
+                            <!-- <button id="btn-0" value="0" data-btn-val="0" onclick="inputNumber('0')">0</button> -->
+                            <button id="decimal-btn" data-operator="decimal" onclick="decimal()">.</button>
+                        </div>
+                        <div class="column">
+                            <button id="btn-3" value="3" data-btn-val="3" onclick="inputNumber('3')">3</button>
+                            <button id="btn-6" value="6" data-btn-val="6" onclick="inputNumber('6')">6</button>
+                            <button id="btn-9" value="9" data-btn-val="9" onclick="inputNumber('9')">9</button>
+                            <!-- <button id="decimal-btn" data-operator="decimal" onclick="decimal()">.</button> -->
+                            <button id="divide-btn" value="/" data-operator="divide" onclick="operatorInput('/')">/</button>
+                        </div>
+                        <div class="column">
+                            <button id="add-btn" value="+" data-operator="add" onclick="operatorInput('+')">+</button>
+                            <button id="subtract-btn" value="-" data-operator="subtract" onclick="operatorInput('-')">-</button>
+                            <button id="multiply-btn" value="*" data-operator="multiply" onclick="operatorInput('*')">x</button>
+                            <!-- <button id="divide-btn" value="/" data-operator="divide" onclick="operatorInput('/')">/</button> -->
+                        </div>
+                    </div>
+                    <!-- <div class="rowcc">
+                        <button id="open-bracket-btn" class="margine" data-operator="open-bracket" onclick="bracketInput()">(</button>
+                        <button id="close-bracket-btn" data-operator="close-bracket" onclick="bracketInput()">)</button>
+                    </div> -->
+                </div>
+            </form>
+        </section>
+        <script src="app.js"></script>
+    </body>
+</html>
