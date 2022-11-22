@@ -16,10 +16,6 @@ function inputNumber(value){
     document.getElementById("textArea").innerText = array.join('');
 }
 
-// function bracketInput(){
-//     value == brackets[0] && canOpenBracket == true ? (canOpenBracket = false, array.push('('), document.getElementById("textArea").innerText = array.join('')) : value == brackets[1] && canOpenBracket == false ? (canOpenBracket = true, array.push(')'), document.getElementById("textArea").innerText = array.join('')) : '';
-// }
-
 function operatorInput(value){
     (!operator.includes(array[array.length - 1])) ? array.push(value) : '';
     document.getElementById("textArea").innerText = array.join('');
@@ -28,16 +24,6 @@ function operatorInput(value){
 function decimal(){
     array.includes(".") != true ? (array.push('.'), document.getElementById("textArea").innerText = array.join('')):'';
 }
-
-// function percentage(){
-//     let dpm = array.slice(-1);
-//     if ((dpm == '1' || dpm == '2' || dpm == '3' || dpm == '4' || dpm == '5' || dpm == '6' || dpm == '7' || dpm == '8' || dpm == '9' || dpm == '0') == true){
-//     array.includes("%") != true ? (array.push('%'), document.getElementById("textArea").innerText = array.join('')):'';}
-// }
-
-// let bracketInput = (value) => {
-//     value == brackets[0] && canOpenBracket == true ? (canOpenBracket = false, holder.push(value), document.getElementById("textArea").innerText = holder.join('')) : value == brackets[1] && canOpenBracket == false ? (canOpenBracket = true, holder.push(value), document.getElementById("textArea").innerText = holder.join('')) : '';
-// }
 
 function solve(){
     document.getElementById("textArea").innerText = eval(array.join(''));
@@ -100,8 +86,3 @@ document.onkeydown = (x) => {
         array.includes("%") != true ? (array.push('%'), document.getElementById("textArea").innerText = array.join('')):'';}
     }
 }
-
-//To Do List:
-/*1. percent sign => no.
-2. Add Bracket Open/Close
-3. Add Negative Number (and automatically add "(" prior to it)*/
